@@ -16,17 +16,21 @@ public class ApplicationDbContext: IdentityDbContext<ApplicationUser>
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        base.OnModelCreating(builder);
+
         var hasher = new PasswordHasher<ApplicationUser>();
         builder.Entity<ApplicationUser>().HasData(
             new ApplicationUser
             {
                 UserName = "test@test.com",
-                NormalizedUserName = "test@test.com".ToUpper(),
+                NormalizedUserName = "TEST@TEST.COM",
                 Email = "test@test.com",
-                NormalizedEmail = "test@test.com".ToUpper(),
+                NormalizedEmail = "TEST@TEST.COM",
                 PasswordHash = hasher.HashPassword(null,"Password12*"),
+                LockoutEnabled = true,
+                EmailConfirmed = true,
             });
 
-        base.OnModelCreating(builder);
+        
     }
 }

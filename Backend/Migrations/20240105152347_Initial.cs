@@ -157,6 +157,11 @@ namespace Net8Identity.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "CustomProperty", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[] { "8c508a53-973f-4b62-bccf-5827aeb9a218", 0, "4f9fc2ea-e23e-46c5-b967-b84cd09c0087", null, "test@test.com", true, true, null, "TEST@TEST.COM", "TEST@TEST.COM", "AQAAAAIAAYagAAAAEI5r+BpSwKixyvYiir2d42GDPKbVaUgOWKh4VNPc3a51VLjcOnnxZ2ktihbokC4xBA==", null, false, "e5c94ed6-c646-445c-9f71-7305a23dae05", false, "test@test.com" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",

@@ -11,7 +11,7 @@ using Net8Identity.Data;
 namespace Net8Identity.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240105131243_Initial")]
+    [Migration("20240105152347_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -213,6 +213,24 @@ namespace Net8Identity.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "8c508a53-973f-4b62-bccf-5827aeb9a218",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "4f9fc2ea-e23e-46c5-b967-b84cd09c0087",
+                            Email = "test@test.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = true,
+                            NormalizedEmail = "TEST@TEST.COM",
+                            NormalizedUserName = "TEST@TEST.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEI5r+BpSwKixyvYiir2d42GDPKbVaUgOWKh4VNPc3a51VLjcOnnxZ2ktihbokC4xBA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "e5c94ed6-c646-445c-9f71-7305a23dae05",
+                            TwoFactorEnabled = false,
+                            UserName = "test@test.com"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

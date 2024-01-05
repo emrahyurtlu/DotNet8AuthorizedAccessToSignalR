@@ -214,16 +214,19 @@ namespace Net8Identity.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "86bd891e-3a35-4b35-8749-b60eac04d462",
+                            Id = "8c508a53-973f-4b62-bccf-5827aeb9a218",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9bc132c2-809c-4865-b213-2fa7b862f1ee",
+                            ConcurrencyStamp = "4f9fc2ea-e23e-46c5-b967-b84cd09c0087",
                             Email = "test@test.com",
-                            EmailConfirmed = false,
-                            LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAECdBxDUaMDZT5sb1X48P3VL8/devtcU74K2Eg4X153cI6TcQ9wm5niAyYqqDbqad+w==",
+                            EmailConfirmed = true,
+                            LockoutEnabled = true,
+                            NormalizedEmail = "TEST@TEST.COM",
+                            NormalizedUserName = "TEST@TEST.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEI5r+BpSwKixyvYiir2d42GDPKbVaUgOWKh4VNPc3a51VLjcOnnxZ2ktihbokC4xBA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8436ce2e-31ac-4b20-9ec4-161b69dea801",
-                            TwoFactorEnabled = false
+                            SecurityStamp = "e5c94ed6-c646-445c-9f71-7305a23dae05",
+                            TwoFactorEnabled = false,
+                            UserName = "test@test.com"
                         });
                 });
 
