@@ -27,3 +27,16 @@
 /Backend/obj/Debug/net8.0/Net8Identity.genruntimeconfig.cache
 /Backend/obj/Debug/net8.0/Net8Identity.pdb
 *.json
+/Backend/LocalDatabase.db-shm
+/Backend/LocalDatabase.db-wal
+/Backend/obj/project.nuget.cache
+/Backend/obj/project.assets.json
+/Backend/obj/Net8Identity.csproj.nuget.g.targets
+/Backend/obj/Net8Identity.csproj.nuget.dgspec.json
+/Backend/obj/Debug/net8.0/Net8Identity.MvcApplicationPartsAssemblyInfo.cs
+/Backend/obj/Debug/net8.0/Net8Identity.csproj.AssemblyReference.cache
+/Backend/obj/Debug/net8.0/Net8Identity.assets.cache
+/Backend/bin/Debug/net8.0/Net8Identity.deps.json
+/Backend/.vs/ProjectEvaluation/net8identity.metadata.v7.bin
+/Backend/.vs/ProjectEvaluation/net8identity.projects.v7.bin
+/Backend/.vs/Net8Identity/v17/.futdcache.v2
