@@ -1,0 +1,23 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Backend/.vs/Net8Identity/config/applicationhost.config
+/Backend/.vs/Net8Identity/DesignTimeBuild/.dtbcache.v2
+*.vsidx
+/Backend/.vs/Net8Identity/FileContentIndex/6ce89f15-d6e0-4609-b3f3-e596ddc39d84.vsidx
+/Backend/.vs/Net8Identity/v17/.suo
+/Backend/bin/Debug/net8.0/Net8Identity.dll
+/Backend/bin/Debug/net8.0/Net8Identity.exe
+/Backend/bin/Debug/net8.0/Net8Identity.pdb
+/Backend/obj/Debug/net8.0/ref/Net8Identity.dll
+/Backend/obj/Debug/net8.0/refint/Net8Identity.dll
+/Backend/obj/Debug/net8.0/apphost.exe
+/Backend/obj/Debug/net8.0/Net8Identity.AssemblyInfo.cs
+/Backend/obj/Debug/net8.0/Net8Identity.AssemblyInfoInputs.cache
+/Backend/obj/Debug/net8.0/Net8Identity.csproj.CoreCompileInputs.cache
+/Backend/obj/Debug/net8.0/Net8Identity.csproj.FileListAbsolute.txt
+/Backend/obj/Debug/net8.0/Net8Identity.dll
+/Backend/obj/Debug/net8.0/Net8Identity.genruntimeconfig.cache
+/Backend/obj/Debug/net8.0/Net8Identity.pdb
+*.json
