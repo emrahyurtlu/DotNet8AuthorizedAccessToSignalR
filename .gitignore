@@ -2,6 +2,12 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+/Backend/.vs
+/Backend/.vs/*
+/Backend/bin
+/Backend/bin/*
+/Backend/obj
+/Backend/obj/*
 /Backend/.vs/Net8Identity/config/applicationhost.config
 /Backend/.vs/Net8Identity/DesignTimeBuild/.dtbcache.v2
 *.vsidx

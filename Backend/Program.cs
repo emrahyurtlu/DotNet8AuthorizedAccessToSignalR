@@ -25,6 +25,7 @@ namespace Net8Identity
                         .AllowAnyHeader();
                     });
             });
+
             builder.Services.AddControllers();
             builder.Services.AddSignalR();
             
@@ -41,21 +42,21 @@ namespace Net8Identity
                 });
                 options.OperationFilter<SecurityRequirementsOperationFilter>();
             });
-            
-            builder.Services.AddDbContext<ProdyumDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection"))
             );
 
             builder.Services.AddAuthentication();
             builder.Services.AddAuthorization();
             
-
-            builder.Services.AddIdentityApiEndpoints<ProdyumUser>()
+            builder.Services.AddIdentityApiEndpoints<ApplicationUser>()
                 .AddDefaultTokenProviders()
-                .AddEntityFrameworkStores<ProdyumDbContext>();
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
             var app = builder.Build();
             app.UseCors("AllowAll");
+
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -63,7 +64,7 @@ namespace Net8Identity
                 app.UseSwaggerUI();
             }
 
-            app.MapIdentityApi<ProdyumUser>();
+            app.MapIdentityApi<ApplicationUser>();
 
             app.UseAuthentication();
             app.UseAuthorization();
@@ -71,7 +72,7 @@ namespace Net8Identity
             
 
             app.MapControllers();
-            app.MapHub<MathHub>("/hub");
+            app.MapHub<MathHub>("/hubs/math-hub");
 
             app.Run();
         }
