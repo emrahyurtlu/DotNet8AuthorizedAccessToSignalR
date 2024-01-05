@@ -14,8 +14,19 @@ namespace Net8Identity
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    builder =>
+                    {
+                        builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                    });
+            });
             builder.Services.AddControllers();
+            builder.Services.AddSignalR();
             
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -34,14 +45,17 @@ namespace Net8Identity
             builder.Services.AddDbContext<ProdyumDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
             );
-            
+
+            builder.Services.AddAuthentication();
             builder.Services.AddAuthorization();
+            
 
             builder.Services.AddIdentityApiEndpoints<ProdyumUser>()
+                .AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<ProdyumDbContext>();
 
             var app = builder.Build();
-
+            app.UseCors("AllowAll");
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -51,11 +65,13 @@ namespace Net8Identity
 
             app.MapIdentityApi<ProdyumUser>();
 
+            app.UseAuthentication();
             app.UseAuthorization();
-
+            
+            
 
             app.MapControllers();
-            app.MapHub<MathHub>("/hubs/math-hub");
+            app.MapHub<MathHub>("/hub");
 
             app.Run();
         }
