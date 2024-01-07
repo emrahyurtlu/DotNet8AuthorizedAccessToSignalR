@@ -10,7 +10,7 @@ cd project_folder\Backend
 dotnet run
 
 Optional: If you need or wonder the identity endpoints, you should visit the url below:
-http://localhost:5034/swagger/index.html
+[SwaggerDocumentation] http://localhost:5034/swagger/index.html
 You will get all the endpoints on swagger screen.
 
 ## Step2: Starting React project
