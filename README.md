@@ -9,6 +9,7 @@ You have a default user on local Sqlite database.
 ## Step1: Run the application
 
 > cd project_folder\Backend
+
 > dotnet run
 
 Optional: If you need or wonder the identity endpoints, you should visit the url below:
@@ -18,4 +19,5 @@ You will get all the endpoints on swagger screen.
 ## Step2: Starting React project
 
 > cd project_folder\Frontend
+
 > npm run dev
