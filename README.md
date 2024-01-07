@@ -1,17 +1,19 @@
-# Net8Identity
+# Net8Identity With SignalR
 
-## Step1: Migrate the initial tables
+You have a default user on local Sqlite database.
+Email: test@test.com
+Password: Password12\*
 
-dotnet ef database update
+## Step1: Run the application
 
-## Step2: Run the application
-
+cd project_folder\Backend
 dotnet run
 
-## Step3: Visit the url
-
+Optional: If you need or wonder the identity endpoints, you should visit the url below:
 http://localhost:5034/swagger/index.html
-
 You will get all the endpoints on swagger screen.
 
-## Step4: Register a user
+## Step2: Starting React project
+
+cd project_folder\Frontend
+npm run dev
