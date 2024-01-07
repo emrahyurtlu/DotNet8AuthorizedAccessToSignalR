@@ -1,7 +1,9 @@
 # Net8Identity With SignalR
 
 You have a default user on local Sqlite database.
+
 Email: test@test.com
+
 Password: Password12\*
 
 ## Step1: Run the application
