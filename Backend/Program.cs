@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Net8Identity.Data;
+using Net8Identity.Extensions;
 using Net8Identity.Hubs;
 using Swashbuckle.AspNetCore.Filters;
 
@@ -62,6 +63,7 @@ namespace Net8Identity
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
+                app.ApplyMigrations();
             }
 
             app.MapIdentityApi<ApplicationUser>();
